@@ -14,15 +14,19 @@ body
     background-color: rgb(51, 97, 130);
 }
 
+/* CABECERA */
+
 .cabecera
 {
     background-color: white;
 }
 
+/* PARTE DONDE ESTÁ EL LOGO, LA BARRA DE BÚSQUEDA, INICIAR SESIÓN Y EL CARRITO */
+
 .menu-superior
 {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
 }
@@ -36,7 +40,6 @@ body
 {
     position: relative;
     width: 450px;
-    justify-self: center;
 }
 
 .barra-busqueda input
@@ -60,7 +63,6 @@ body
 {
     display: flex;
     gap: 20px;
-    justify-self: end;
 }
 
 .icono
@@ -85,7 +87,9 @@ body
     background-color: #f2f2f2;
 }
 
-.nav ul
+/* MENÚ DONDE SE ENCUENTRAN LOS APARTADOS PORTÁTILES, MÓVILES Y COMPONENTES */
+
+.menu-productos ul
 {
     display: flex;
     justify-content: center;
@@ -93,7 +97,7 @@ body
     list-style: none;
 }
 
-.nav ul li a
+.menu-productos ul li a
 {
     padding: 15px 30px;
     display: block;
@@ -101,7 +105,7 @@ body
     color: white;
 }
 
-.nav ul li a:hover
+.menu-productos ul li a:hover
 {
     background-color: white;
     color: orange;
@@ -113,6 +117,8 @@ main
     margin-top: 20px;
 }
 
+/* PRODUCTO SUPERIOR QUE ESTÁ EN OFERTA */
+
 .oferta
 {
     display: flex;
@@ -122,13 +128,15 @@ main
 
 .producto-oferta
 {
-    width: 480px;
+    width: 300px;
 }
+
+/* EL RESTO DE PRODUCTOS QUE SE ENCUENTRAN DEBAJO */
 
 .galeria-productos
 {
-    display: grid;
-    grid-template-columns: repeat(3, 220px);
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     padding: 20px 40px 40px;
     justify-content: center;
@@ -138,6 +146,7 @@ main
 {
     background-color: white;
     padding: 15px;
+    width: 220px;
     border-radius: 6px;
     text-align: center;
     display: flex;
@@ -152,6 +161,8 @@ main
     object-fit: contain;
 }
 
+/* APARTADO DEL PRECIO */
+
 .precio
 {
     font-size: 20px;
@@ -159,12 +170,16 @@ main
     color: red;
 }
 
+/* TEXTO QUE DICE OFERTA */
+
 .badge-oferta
 {
     font-size: 14px;
     font-weight: bold;
     margin-left: 8px;
 }
+
+/* FOOTER */
 
 .footer
 {
@@ -217,12 +232,14 @@ main
     text-decoration: underline;
 }
 
+/* MEDIA QUERIES */
+
 @media (max-width: 900px)
 {
 
     .menu-superior
     {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 20px;
         text-align: center;
     }
@@ -238,14 +255,9 @@ main
         justify-content: center;
     }
 
-    .galeria-productos
-    {
-        grid-template-columns: repeat(2, 220px);
-    }
-
     .footer
     {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 30px;
         text-align: center;
     }
@@ -259,37 +271,40 @@ main
 @media (max-width: 600px)
 {
 
-    .logo {
+    .logo
+    {
         width: 120px;
         margin: 0 auto;
     }
 
-    .nav ul {
+    .menu-productos ul
+    {
         flex-direction: column;
     }
 
-    .nav ul li a {
+    .menu-productos ul li a
+    {
         padding: 12px;
     }
 
-    .galeria-productos {
-        grid-template-columns: 1fr;
-    }
-
-    .producto-oferta {
+    .producto-oferta
+    {
         max-width: 100%;
     }
 
-    .iconos-cabecera {
+    .iconos-cabecera
+    {
         flex-direction: column;
         gap: 10px;
     }
 
-    .footer {
+    .footer
+    {
         padding: 25px;
     }
 
-    .iconos-rrss {
+    .iconos-rrss
+    {
         justify-content: center;
     }
 }
