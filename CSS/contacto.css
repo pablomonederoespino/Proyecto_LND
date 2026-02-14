@@ -57,7 +57,7 @@ body
     color: white;
 }
 
-/* DONDE ESTÁN EL MAPA Y EL FORMULARIO */
+/* PARTE DONDE ESTÁN EL MAPA Y EL FORMULARIO */
 
 .parte-contacto
 {
@@ -66,7 +66,7 @@ body
     align-items: stretch;
 }
 
-.mapa
+.mapa, .formulario
 {
     flex: 1;
     background-color: white;
@@ -84,4 +84,160 @@ body
     width: 100%;
     height: 350px;
     border: 0;
+}
+
+/* FORMULARIO */
+
+.formulario h2
+{
+    margin-bottom: 20px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label
+{
+    font-weight: 500;
+}
+
+input[type="text"], input[type="email"], select
+{
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input:focus, select:focus
+{
+    outline: none;
+    border-color: orange;
+}
+
+.metodo-contacto
+{
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.opciones
+{
+    display: flex;
+    gap: 15px;
+}
+
+/* BOTÓN DE ENVÍO DEL FORMULARIO */
+
+button
+{
+    margin-top: 15px;
+    padding: 12px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: darkorange;
+}
+
+/* FOOTER */
+
+.footer
+{
+    background-color: rgb(84, 82, 82);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rrss p
+{
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.iconos-rrss
+{
+    display: flex;
+    gap: 15px;
+}
+
+.iconos-rrss img
+{
+    width: 32px;
+    height: auto;
+}
+
+.otra-info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.otra-info a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.otra-info a:hover
+{
+    text-decoration: underline;
+}
+
+.contacto p
+{
+    margin-top: 8px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px)
+{
+    .footer
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacto, .otra-info, .rrss
+    {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .logo
+    {
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    .contacto, .otra-info, .rrss
+    {
+        width: 100%;
+    }
+
+    .iconos-rrss
+    {
+        justify-content: center;
+    }
 }
