@@ -25,6 +25,7 @@ body
 
 .menu-superior
 {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +39,9 @@ body
 
 .barra-busqueda
 {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 450px;
 }
 
@@ -128,7 +131,27 @@ main
 
 .producto-oferta
 {
-    width: 300px;
+    background-color: white;
+    padding: 20px;
+    width: 325px;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.producto-oferta img
+{
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.producto-oferta:hover img
+{
+    transform: scale(1.08);
 }
 
 /* EL RESTO DE PRODUCTOS QUE SE ENCUENTRAN DEBAJO */
@@ -152,6 +175,7 @@ main
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow: hidden;
 }
 
 .producto img
@@ -159,6 +183,12 @@ main
     width: 100%;
     height: 160px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover img
+{
+    transform: scale(1.08);
 }
 
 /* APARTADO DEL PRECIO */
@@ -170,19 +200,11 @@ main
     color: red;
 }
 
-/* TEXTO QUE DICE OFERTA */
-
-.badge-oferta
-{
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 8px;
-}
-
 /* FOOTER */
 
 .footer
 {
+    position: relative;
     background-color: rgb(84, 82, 82);
     color: white;
     display: flex;
@@ -209,6 +231,9 @@ main
 
 .otra-info
 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
