@@ -153,20 +153,18 @@ button:hover
 
 .footer
 {
+    position: relative;
     background-color: rgb(84, 82, 82);
     color: white;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 25px 60px;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .rrss p
 {
     margin-bottom: 12px;
-    font-weight: 500;
 }
 
 .iconos-rrss
@@ -178,16 +176,23 @@ button:hover
 .iconos-rrss img
 {
     width: 32px;
-    height: auto;
 }
 
 .otra-info
 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     text-align: center;
+}
+
+.contacto p
+{
+    margin-top: 8px;
 }
 
 .otra-info a
@@ -199,11 +204,6 @@ button:hover
 .otra-info a:hover
 {
     text-decoration: underline;
-}
-
-.contacto p
-{
-    margin-top: 8px;
 }
 
 /* MEDIA QUERIES */
