@@ -114,7 +114,7 @@ body
     color: orange;
 }
 
-main
+.contenedor-principal
 {
     flex: 1;
     margin-top: 20px;
@@ -316,42 +316,165 @@ main
 
     .menu-superior
     {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+        flex-wrap: wrap;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo
+    {
+        width: 120px;
     }
 
     .barra-busqueda
     {
         width: 100%;
-        max-width: 400px;
+        order: 3;
+        position: static;
+        transform: none;
+    }
+
+    .barra-busqueda input
+    {
+        width: 100%;
     }
 
     .iconos-cabecera
     {
-        justify-content: center;
+        gap: 15px;
+    }
+
+    .icono
+    {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .icono img
+    {
+        width: 18px;
+    }
+
+    .menu-productos ul li a
+    {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .item-carrusel
+    {
+        gap: 25px;
+    }
+
+    .producto
+    {
+        width: 180px;
+    }
+
+    .producto img
+    {
+        height: 140px;
+    }
+
+    .flechas-carrusel
+    {
+        padding: 0 15px;
+    }
+
+    .flechas-carrusel i
+    {
+        font-size: 28px;
+    }
+
+    .producto-oferta
+    {
+        width: 280px;
+    }
+
+    .producto-oferta img
+    {
+        height: 240px;
     }
 
     .footer
     {
-        flex-direction: column;
-        gap: 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 30px;
+        justify-content: center;
+    }
+
+    .rrss
+    {
+        flex-basis: 100%;
         text-align: center;
+    }
+
+    .otra-info
+    {
+        position: static;
+        transform: none;
+        flex-basis: 100%;
     }
 
     .contacto
     {
+        flex-basis: 100%;
         text-align: center;
     }
 }
 
 @media (max-width: 600px)
 {
+    .menu-superior
+    {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 12px;
+    }
 
     .logo
     {
-        width: 120px;
-        margin: 0 auto;
+        width: 100px;
+    }
+
+    .barra-busqueda
+    {
+        width: 100%;
+    }
+
+    .barra-busqueda input
+    {
+        padding: 8px 35px 8px 12px;
+        font-size: 14px;
+    }
+
+    .icono-busqueda
+    {
+        width: 16px;
+    }
+
+    .iconos-cabecera
+    {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icono
+    {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .icono span
+    {
+        display: none;
+    }
+
+    .icono img
+    {
+        width: 20px;
     }
 
     .menu-productos ul
@@ -361,27 +484,117 @@ main
 
     .menu-productos ul li a
     {
-        padding: 12px;
+        padding: 12px 15px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .contenedor-principal
+    {
+        margin-top: 10px;
+    }
+
+    .oferta
+    {
+        padding: 20px 15px;
     }
 
     .producto-oferta
     {
-        max-width: 100%;
+        width: 100%;
+        max-width: 250px;
     }
 
-    .iconos-cabecera
+    .producto-oferta img
     {
-        flex-direction: column;
-        gap: 10px;
+        height: 200px;
+    }
+
+    .producto-oferta h3
+    {
+        font-size: 14px;
+    }
+
+    .producto-oferta .precio
+    {
+        font-size: 16px;
+    }
+
+    .contenedor-carrusel
+    {
+        height: 360px;
+    }
+
+    .item-carrusel
+    {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+        justify-content: space-around;
+    }
+
+    .producto
+    {
+        width: calc(50% - 8px);
+        max-width: 140px;
+    }
+
+    .producto img
+    {
+        height: 120px;
+    }
+
+    .producto h3
+    {
+        font-size: 12px;
+    }
+
+    .producto .precio
+    {
+        font-size: 14px;
+    }
+
+    .flechas-carrusel
+    {
+        display: none;
     }
 
     .footer
     {
-        padding: 25px;
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    .rrss
+    {
+        text-align: center;
     }
 
     .iconos-rrss
     {
         justify-content: center;
+    }
+
+    .iconos-rrss img
+    {
+        width: 28px;
+    }
+
+    .otra-info
+    {
+        order: 3;
+        gap: 10px;
+    }
+
+    .contacto
+    {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .contacto p
+    {
+        margin-top: 5px;
     }
 }

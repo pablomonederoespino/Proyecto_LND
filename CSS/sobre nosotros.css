@@ -1,0 +1,347 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body
+{
+    background-color: rgb(51, 97, 130);
+}
+
+/* CABECERA */
+
+.cabecera
+{
+    background-color: white;
+}
+
+/* PARTE DONDE SE ENCUENTRA EL LOGO CON ACCESO A INDEX.HTML */
+
+.menu-superior
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo
+{
+    width: 140px;
+    cursor: pointer;
+}
+
+main
+{
+    flex: 1;
+}
+
+/* SECCIÓN DEL VÍDEO Y EL TEXTO */
+
+.contenedor-video
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-fondo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* PARA OSCURECER UN POCO EL VÍDEO Y DESTACAR EL TEXTO */
+
+.oscurecer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* TEXTO SUPERPUESTO SOBRE EL VÍDEO */
+
+.texto
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+    max-width: 80%;
+    width: 100%;
+}
+
+.texto h1
+{
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.texto p
+{
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* FOOTER */
+
+.footer
+{
+    position: relative;
+    background-color: rgb(84, 82, 82);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.rrss p
+{
+    margin-bottom: 12px;
+}
+
+.iconos-rrss
+{
+    display: flex;
+    gap: 15px;
+}
+
+.iconos-rrss img
+{
+    width: 32px;
+}
+
+.otra-info
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.contacto p
+{
+    margin-top: 8px;
+}
+
+.otra-info a, .titulo-contacto
+{
+    color: white;
+    text-decoration: none;
+}
+
+.otra-info a:hover, .titulo-contacto:hover
+{
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px)
+{
+    .menu-superior
+    {
+        padding: 15px 20px;
+    }
+
+    .logo
+    {
+        width: 120px;
+    }
+
+    .contenedor-video
+    {
+        height: 80vh;
+    }
+
+    .texto
+    {
+        max-width: 90%;
+    }
+
+    .texto h1
+    {
+        font-size: 40px;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .texto p
+    {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .footer
+    {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 30px;
+        justify-content: center;
+    }
+
+    .rrss
+    {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .rrss p
+    {
+        margin-bottom: 10px;
+    }
+
+    .iconos-rrss
+    {
+        justify-content: center;
+    }
+
+    .otra-info
+    {
+        position: static;
+        transform: none;
+        flex-basis: 100%;
+        gap: 10px;
+    }
+
+    .contacto
+    {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .contacto p
+    {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .menu-superior
+    {
+        padding: 12px 10px;
+    }
+
+    .logo
+    {
+        width: 100px;
+    }
+
+    .contenedor-video
+    {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    #video-fondo
+    {
+        object-fit: cover;
+    }
+
+    .texto
+    {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+
+    .texto h1
+    {
+        font-size: 28px;
+        margin-bottom: 12px;
+        letter-spacing: 0px;
+        font-weight: 600;
+    }
+
+    .texto p
+    {
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+
+    .footer
+    {
+        flex-direction: column;
+        padding: 12px 10px;
+        gap: 12px;
+    }
+
+    .rrss
+    {
+        text-align: center;
+        order: 1;
+    }
+
+    .rrss p
+    {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .iconos-rrss
+    {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .iconos-rrss img
+    {
+        width: 28px;
+    }
+
+    .otra-info
+    {
+        order: 2;
+        gap: 8px;
+    }
+
+    .otra-info a
+    {
+        font-size: 12px;
+    }
+
+    .contacto
+    {
+        order: 3;
+        text-align: center;
+    }
+
+    .titulo-contacto
+    {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .contacto p
+    {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+}

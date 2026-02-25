@@ -210,34 +210,254 @@ button:hover
 
 @media (max-width: 900px)
 {
+    .menu-superior
+    {
+        padding: 15px 20px;
+    }
+
+    .logo
+    {
+        width: 120px;
+    }
+
+    .contenedor-principal
+    {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .contenedor-principal h1
+    {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .texto-intro
+    {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .parte-contacto
+    {
+        gap: 30px;
+    }
+
+    .mapa, .formulario
+    {
+        padding: 15px;
+    }
+
+    .mapa h2, .formulario h2
+    {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .mapa iframe
+    {
+        height: 300px;
+    }
+
+    form
+    {
+        gap: 10px;
+    }
+
+    label
+    {
+        font-size: 14px;
+    }
+
+    input[type="text"], input[type="email"], select
+    {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .metodo-contacto
+    {
+        font-size: 14px;
+    }
+
+    .opciones
+    {
+        gap: 12px;
+    }
+
+    button
+    {
+        padding: 10px;
+        font-size: 15px;
+    }
+
     .footer
     {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 30px;
+        justify-content: center;
+    }
+
+    .rrss
+    {
+        flex-basis: 100%;
         text-align: center;
     }
 
-    .contacto, .otra-info, .rrss
+    .otra-info
     {
-        margin-bottom: 15px;
+        position: static;
+        transform: none;
+        flex-basis: 100%;
+    }
+
+    .contacto
+    {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .contacto p
+    {
+        margin-top: 5px;
     }
 }
 
 @media (max-width: 600px)
 {
-    .logo
+    .menu-superior
     {
-        width: 120px;
-        margin: 0 auto;
+        padding: 12px 10px;
     }
 
-    .contacto, .otra-info, .rrss
+    .logo
     {
+        width: 100px;
+    }
+
+    .contenedor-principal
+    {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .contenedor-principal h1
+    {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .texto-intro
+    {
+        font-size: 13px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .parte-contacto
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mapa, .formulario
+    {
+        padding: 12px;
+        flex: none;
+    }
+
+    .mapa h2, .formulario h2
+    {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .mapa iframe
+    {
+        height: 250px;
+    }
+
+    form
+    {
+        gap: 8px;
+    }
+
+    label
+    {
+        font-size: 13px;
+    }
+
+    input[type="text"], input[type="email"], select
+    {
+        padding: 8px;
+        font-size: 13px;
         width: 100%;
     }
 
-    .iconos-rrss
+    .metodo-contacto
     {
-        justify-content: center;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .opciones
+    {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .opciones label
+    {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    button
+    {
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .footer
+    {
+        flex-direction: column;
+        padding: 12px 10px;
+        gap: 12px;
+    }
+
+    .rrss
+    {
+        text-align: center;
+    }
+
+    .iconos-rrss img
+    {
+        width: 28px;
+    }
+
+    .otra-info
+    {
+        order: 3;
+        gap: 8px;
+    }
+
+    .otra-info a
+    {
+        font-size: 12px;
+    }
+
+    .contacto
+    {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .contacto p
+    {
+        margin-top: 4px;
     }
 }
