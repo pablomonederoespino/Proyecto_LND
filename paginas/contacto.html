@@ -8,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="../CSS/contacto.css">
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
@@ -36,7 +38,8 @@
 
             <div class="mapa">
                 <h2>Nuestra ubicación</h2>
-                <iframe src="https://www.google.com/maps?q=IES%20El%20Rinc%C3%B3n%20Las%20Palmas%20de%20Gran%20Canaria&output=embed"></iframe>
+                <iframe
+                    src="https://www.google.com/maps?q=IES%20El%20Rinc%C3%B3n%20Las%20Palmas%20de%20Gran%20Canaria&output=embed"></iframe>
             </div>
 
             <div class="formulario">
@@ -62,8 +65,14 @@
                         <label><input type="radio" name="contacto" value="telefono"> Teléfono</label>
                     </div>
 
-                    <button type="submit">Enviar mensaje</button>
+                    <!--FUNCIONALIDAD DE JAVASCRIPT
+                    ES UN BOTÓN QUE AL PULSARLO INCREMENTA EL NÚMERO DE MENSAJES/CONSULTAS REALIZADAS.
+                    ESTÁ CONFIGURADO PARA QUE SOLO FUNCIONE CUANDO ESTÉN RELLENADOS TODOS LOS CAMPOS DEL FORMULARIO-->
+                    <button type="submit" onclick="incrementar(); return false;">Enviar mensaje</button> <!--EL RETURN FALSE ES PARA EVITAR QUE MANDE A OTRA PÁGINA Y REINICIE EL CONTADOR-->
                 </form>
+                <div class="contador-consultas">
+                    <p>Consultas realizadas: <span id="contador">0</span></p>
+                </div>
             </div>
 
         </section>
@@ -91,6 +100,8 @@
         </div>
     </footer>
 
+    <!--SCRIPT CON LA REFERENCIA AL ARCHIVO JS-->
+    <script src="../JS/contador-consultas.js"></script>
 </body>
 
 </html>
