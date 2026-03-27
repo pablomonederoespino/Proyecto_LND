@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+    <channel>
+        <title>Canal RSS</title>
+        <link>http://127.0.0.1:5500/paginas/index.html</link>
+        <description>Resumen de las actualizaciones de la web</description>
+        <image>
+            <url>http://127.0.0.1:5500/img/logo.png</url>
+            <title>Logo de la web</title>
+            <link>http://127.0.0.1:5500/paginas/index.html</link>
+        </image>
+        <language>es-es</language>
+
+        <item>
+            <title>Apartado de RSS</title>
+            <link>http://127.0.0.1:5500/paginas/index.html</link>
+            <description>Se ha añadido un apartado de RSS en el menú de la página de inicio.</description>
+            <pubDate>Mon, 23 Mar 2026 13:00:00 GMT</pubDate>
+            <guid>http://127.0.0.1:5500/paginas/index.html/xml/item0001</guid>
+        </item>
+
+        <item>
+            <title>Cambio del producto en oferta</title>
+            <link>http://127.0.0.1:5500/paginas/index.html</link>
+            <description>Se ha cambiado el producto en oferta de la página de inicio.</description>
+            <pubDate>Tue, 24 Mar 2026 19:10:00 GMT</pubDate>
+            <guid>http://127.0.0.1:5500/paginas/index.html/xml/item0002</guid>
+        </item>
+
+    </channel>
+
+</rss>
